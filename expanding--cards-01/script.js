@@ -17,6 +17,7 @@ for (let i = 0; i < description.length; i++) {
 if (window.innerWidth > 900) {
   imageArray.map((image, index) => {
     image.addEventListener("click", () => {
+      imageArray.forEach((img) => img.classList.remove("active2"));
       descriptionArray.forEach((des) => des.classList.remove("visibile"));
       imageArray.forEach((img) => img.classList.remove("active"));
       descriptionArray[index].classList.add("visibile");
@@ -24,9 +25,10 @@ if (window.innerWidth > 900) {
     });
   });
   console.log("900");
-}else  (window.innerWidth <= 900) {
+} else {
   imageArray.map((image, index) => {
     image.addEventListener("click", () => {
+      imageArray.forEach((img) => img.classList.remove("active"));
       descriptionArray.forEach((des) => des.classList.remove("visibile"));
       imageArray.forEach((img) => img.classList.remove("active2"));
       descriptionArray[index].classList.add("visibile");
