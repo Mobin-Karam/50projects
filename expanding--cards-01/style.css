@@ -1,0 +1,98 @@
+/* Google Fonts :: Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Boilerplate */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.items {
+  margin: 0 auto;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.image {
+  width: 100px;
+  height: 600px;
+  background-color: #8e8e8e;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  transition: all 0.45s ease;
+  -webkit-transition: all 0.45s ease;
+  -moz-transition: all 0.45s ease;
+  -ms-transition: all 0.45s ease;
+  -o-transition: all 0.45s ease;
+}
+
+#image1 {
+  background-image: url("./assets/images/img01.jpeg");
+}
+
+#image2 {
+  background-image: url("./assets/images/img02.jpeg");
+}
+
+#image3 {
+  background-image: url("./assets/images/img03.jpeg");
+}
+
+#image4 {
+  background-image: url("./assets/images/img04.jpeg");
+}
+
+#image5 {
+  background-image: url("./assets/images/img05.jpeg");
+}
+
+.active {
+  width: 600px !important;
+}
+
+.description {
+  position: absolute;
+  bottom: 40px;
+  left: 45px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.visibile {
+  opacity: 1 !important;
+}
