@@ -5,6 +5,7 @@
   --active-color: rgb(2, 166, 255);
   --disactive-color: rgb(203, 203, 203);
   --text-white: rgb(255, 255, 255);
+  --bg-white: rgb(245, 245, 245);
 }
 
 * {
@@ -52,18 +53,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--bg-white);
   border: 5px solid var(--disactive-color);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  transition: border 0.2s ease-in-out;
+  -webkit-transition: border 0.2s ease-in-out;
+  -moz-transition: border 0.2s ease-in-out;
+  -ms-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
 }
 
 .line {
+  position: relative;
   width: 100%;
-  height: 1px;
   border: 3px solid var(--disactive-color);
+  transition: border 0.2s ease-in;
+  -webkit-transition: border 0.2s ease-in;
+  -moz-transition: border 0.2s ease-in;
+  -ms-transition: border 0.2s ease-in;
+  -o-transition: border 0.2s ease-in;
+  z-index: 0;
 }
 
 .circle.active,
