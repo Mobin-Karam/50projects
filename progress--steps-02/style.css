@@ -1,6 +1,12 @@
 /* Google Fonts :: Roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+:root {
+  --active-color: rgb(2, 166, 255);
+  --disactive-color: rgb(203, 203, 203);
+  --text-white: rgb(255, 255, 255);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,4 +15,96 @@ body {
   font-family: "Roboto", sans-serif;
   display: flex;
   margin: 0;
+}
+
+.progress-steps {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.center {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.steps {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid var(--disactive-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border: 3px solid var(--disactive-color);
+}
+
+.circle.active,
+.line.active {
+  border-color: var(--active-color);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  gap: 20px;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 14px;
+  background-color: var(--disactive-color);
+  color: var(--text-white);
+  padding: 10px 36px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.btn.active {
+  background-color: var(--active-color);
+}
+
+@media only screen and (min-width: 900px) {
+  .center {
+    width: 600px;
+  }
+
+  .circle {
+    font-size: 18px;
+    padding: 20px;
+  }
 }
